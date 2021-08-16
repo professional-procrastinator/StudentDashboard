@@ -10,4 +10,4 @@ Student dashboard, project created by @smeh09 and @Haunter-123
 ###### Clock
 ###### Themes and Settings
 ###### Snake game
-###### Calender
+###### Calendar
