@@ -7,4 +7,5 @@ Student dashboard, project created by @smeh09 and @Haunter-123
 ###### Notepad
 ###### Paint
 ###### To Do List
+###### Clock
 ###### Themes and Settings
