@@ -1,0 +1,51 @@
+.window{
+    width:340px;
+}
+
+.btnsAll{
+    display:grid;
+    
+    grid-template-columns: 80px 80px 80px 80px;
+}
+.buttons{
+    border: 2px solid rgba(15, 14, 14, 0.8);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#main_input{
+   
+    border-radius: 5px;
+    padding:30px;
+    text-align: right;
+    border:none;
+    background-color: rgb(20, 20, 20);
+    color:white;
+    font-family: Inter;
+    font-size: 20px;
+}
+
+.calc_btn_row1{
+    background-color: rgb(128, 124, 124);
+    border:none;
+    padding:20px;
+    color:rgb(255, 255, 255);
+    font-family: Lato;
+    font-size:20px;
+    width:90px;
+    font-weight: 400px;
+}
+.calc_btn_row1:hover{
+    background-color: rgb(87, 85, 85);
+}
+
+#label{
+    
+    font-family: Inter;
+    font-size:20px;
+}
