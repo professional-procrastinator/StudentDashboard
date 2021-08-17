@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calc">
+        <div class="window">
+            <label  id="label"></label>
+            <br>
+            <div class="mainInput"><input type="number" placeholder="0" id="main_input" name="mainIn" onkeydown="inputFunc(event,document.getElementById('main_input').value)"></div>
+            <div class="break"></div>
+
+            <div class="btnsAll">
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('clear')">AC</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('sign')">+/-</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('perc')">%</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('remLast')">C</button></div>
+            </div>
+    </div>
+    </div>
+
+<script src="calc.js"></script>
+</body>
+</html>
