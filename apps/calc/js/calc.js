@@ -6,7 +6,8 @@ function exec(type){
         case "remLast":
             document.getElementById("main_input").value = document.getElementById("main_input").value.slice(0, -1);
         
-    }
+    } 
+    
 }
 
 function inputFunc(event,prevVal){
