@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/to-do-list.css">
+    <title>To Do list</title>
+</head>
+<body>
+    <!-- Header starts here -->
+    <header>
+        <nav>
+            <a id="logo" href="home.html">Student Dashboard</a>
+            <div id="nav-right">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header ends here -->
+    <!-- Main starts here -->
+    <main>
+        <section id="tasks">
+            <h3 id="heading">My work</h3>
+            <div id="taks-main">
+                <h1 id="no-tasks">No tasks</h1>
+                <div id="create-task-div">
+                    <input type="text" name="create-task-input" id="create-task-input" placeholder="Enter task here">
+                    <button onclick="createTask()">Create</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./JS/to-do-list.js"></script>
+    <!-- Main ends here -->
+</body>
+</html>
