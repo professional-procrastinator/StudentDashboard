@@ -26,7 +26,7 @@ function inputFunc(event,prevVal){
         
     }
 
-    if((key==187 && event.shiftkey == false) && (oper=='add')){
+    else if((key==187 && event.shiftkey == false) && (oper=='add')){
         n2 = parseFloat(document.getElementById("main_input").value);
         
         document.getElementById("main_input").value = n1+n2;
@@ -40,5 +40,26 @@ function inputFunc(event,prevVal){
         document.getElementById("label").innerHTML = "";
     }
 
+    if(key == 189){
+        oper = 'sub';
+        document.getElementById("label").innerHTML = prevVal;
+        document.getElementById("main_input").value = "";
+        n1 = parseFloat(prevVal);
+        
+    }
+
+    if((key==189 && event.shiftkey == false) && (oper=='sub')){
+        n2 = parseFloat(document.getElementById("main_input").value);
+        
+        document.getElementById("main_input").value = n1+n2;
+        document.getElementById("label").innerHTML = "";
+    }
+    
+    else if((key == 13) && (oper=='sub')){
+        n2 = parseFloat(document.getElementById("main_input").value);
+        
+        document.getElementById("main_input").value = n1+n2;
+        document.getElementById("label").innerHTML = "";
+    }
     
 }
