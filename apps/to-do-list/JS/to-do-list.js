@@ -1,12 +1,15 @@
-localStorage.setItem('tasks', ['Do homework', 'Play', 'Complete To do list']);
-
 function loadTasks() {
-    if(localStorage.getItem('tasks') == null) {
-        return []
+    if(localStorage.getItem('tasks') == []) {
+        return [];
     }
     else {
         return localStorage.getItem('tasks').split(',');
     }
+}
+
+function storeTasks(task, tasks) {
+    tasks.push(task);
+    localStorage.setItem('tasks', tasks);
 }
 
 function renderTask(task, tasksDiv) {
@@ -34,9 +37,20 @@ function renderTasks(tasks) {
     createTaskDiv.insertAdjacentElement('beforebegin', tasksDiv)
 }
 
-function createTask() {
-    
-}
-
 tasks = loadTasks();
 renderTasks(tasks);
+
+function createTask() {
+    var taskInputBox = document.querySelector('#create-task-input');
+    var tasksDiv = document.querySelector('#tasks-container');
+    var task = taskInputBox.value;
+    if(task != '') {
+        renderTask(task, tasksDiv);
+        storeTasks(task, tasks);
+        taskInputBox.value = '';
+    }
+    else {
+        alert('No task selected');
+    }
+
+}
