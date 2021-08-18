@@ -61,5 +61,4 @@ function inputFunc(event,prevVal){
         document.getElementById("main_input").value = n1+n2;
         document.getElementById("label").innerHTML = "";
     }
-    
 }
