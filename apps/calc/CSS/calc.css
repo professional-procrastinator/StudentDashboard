@@ -4,6 +4,13 @@
 
 .window{
     width:340px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .btnsAll{
@@ -16,6 +23,8 @@
     border: 2px solid rgba(15, 14, 14, 0.8);
     
 }
+
+
 
 #btn0{
     width:157px;
@@ -86,6 +95,9 @@ input::-webkit-inner-spin-button {
     width:90px;
     font-weight: 400px;
 }
+.operbtns:hover{
+    background-color: rgb(245, 86, 37);
+}
 
 .toprowbtns{
     text-align: center;
@@ -98,3 +110,7 @@ input::-webkit-inner-spin-button {
     width:90px;
     font-weight: 400px;
 }
+.toprowbtns:hover{
+    background-color: rgb(7, 7, 6);
+}
+

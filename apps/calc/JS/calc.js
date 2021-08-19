@@ -1,13 +1,54 @@
 oper = '';
 
 function exec(type){
-    switch(type){
-        case "clear":
+    
+        if(type=='1'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "1";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='2'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "2";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='3'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "3";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='4'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "4";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='5'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "5";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='6'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "6";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='7'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "7";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='8'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "8";
+            document.getElementById("main_input").focus();
+        }
+        else if(type=='9'){
+            document.getElementById("main_input").value = document.getElementById("main_input").value+ "9";
+            document.getElementById("main_input").focus();
+        }
+
+        else if(type=="clear"){
+
+        
+           
             document.getElementById("main_input").value = "";
+            
             document.getElementById("label").innerHTML = "";
     
-        
-    }
+        }
+    
 }
 
 n1 = 0.0;
