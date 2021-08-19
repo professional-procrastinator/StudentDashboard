@@ -14,15 +14,36 @@
         <div class="window">
             <label  id="label"></label>
             <br>
-            <div class="mainInput"><input type="number" title="" placeholder="0" id="main_input" name="mainIn" onkeydown="inputFunc(event,document.getElementById('main_input').value)"></div>
+            <div class="mainInput"><input type="number" title="" placeholder="0" id="main_input" nam="mainIn" onkeydown="inputFunc(event,document.getElementById('main_input').value)"></div>
             <div class="break"></div>
 
             <div class="btnsAll">
-                <div class="buttons"><button class="calc_btn_row1" onclick="exec('clear')">AC</button></div>
-                <div class="buttons"><button class="calc_btn_row1" onclick="exec('sign')">+/-</button></div>
-                <div class="buttons"><button class="calc_btn_row1" onclick="exec('perc')">%</button></div>
-                <div class="buttons"><button class="calc_btn_row1" onclick="exec('remLast')">C</button></div>
+                <div class="buttons"><button class="toprowbtns" onclick="exec('clear')">AC</button></div>
+                <div class="buttons"><button class="toprowbtns" onclick="exec('sign')">+/-</button></div>
+                <div class="buttons"><button class="toprowbtns" onclick="exec('perc')">%</button></div>
+                <div class="buttons"><button class="operbtns" onclick="exec('divide')">÷</button></div>
+
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('7')">7</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('8')">8</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('9')">9</button></div>
+                <div class="buttons"><button class="operbtns" onclick="exec('multiply')">×</button></div>
+
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('4')">4</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('5')">5</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('6')">6</button></div>
+                <div class="buttons"><button class="operbtns" onclick="exec('subtract')">—</button></div>
+
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('1')">1</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('2')">2</button></div>
+                <div class="buttons"><button class="calc_btn_row1" onclick="exec('3')">3</button></div>
+                <div class="buttons"><button class="operbtns" onclick="exec('add')">+</button></div>
+
+                
             </div>
+                <div class="lastrow">
+                    <div class="buttons"><button class="calc_btn_row1" id="btn0" onclick="exec('0')">0</button></div>
+                    <div class="buttons"><button class="calc_btn_row1" id="btndot" onclick="exec('dot')">.</button></div>
+                </div>
     </div>
     </div>
 
