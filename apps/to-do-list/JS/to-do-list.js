@@ -52,5 +52,4 @@ function createTask() {
     else {
         alert('No task selected');
     }
-
 }
