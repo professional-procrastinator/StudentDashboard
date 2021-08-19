@@ -36,14 +36,31 @@ function renderTasks(tasks) {
     createTaskDiv.insertAdjacentElement('beforebegin', tasksDiv);
 }
 
-tasks = loadTasks();
+var tasks = loadTasks();
 renderTasks(tasks);
+
+function clearTasks() {
+    if(tasks.length == 0) {
+        alert('There are no tasks to be cleared');
+    }
+    else {
+        var tasksDiv = document.querySelector('#tasks-container');
+        var noTaskHeading = document.querySelector('#no-tasks');
+        localStorage.setItem('tasks', []);
+        tasksDiv.remove();
+        noTaskHeading.style.display = 'block';
+    }
+}
 
 function createTask() {
     var taskInputBox = document.querySelector('#create-task-input');
     var tasksDiv = document.querySelector('#tasks-container');
+    var noTaskHeading = document.querySelector('#no-tasks');
     var task = taskInputBox.value;
     if(task != '') {
+        if(tasks.length == 0) {
+            noTaskHeading.style.display = 'none';
+        }
         renderTask(task, tasksDiv);
         storeTasks(task, tasks);
         taskInputBox.value = '';

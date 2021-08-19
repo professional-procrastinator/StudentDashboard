@@ -110,6 +110,10 @@ button {
     cursor: pointer;
 }
 
+#no-tasks {
+    padding: 20px;
+}
+
 .task {
     background-color: lightblue;
     border: 1px solid black;
