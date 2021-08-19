@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
 .window{
     width:340px;
 }
@@ -8,8 +12,27 @@
     grid-template-columns: 80px 80px 80px 80px;
 }
 .buttons{
+    
     border: 2px solid rgba(15, 14, 14, 0.8);
+    
 }
+
+#btn0{
+    width:157px;
+    
+    height:60px;
+}
+
+#btndot{
+    
+    width:77px;
+    margin-top:0%;
+    height:60px;
+}
+.lastrow{
+    display:flex;
+}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -24,18 +47,20 @@ input::-webkit-inner-spin-button {
     padding:30px;
     text-align: right;
     border:none;
+    width:272px;
     background-color: rgb(20, 20, 20);
     color:white;
-    font-family: Inter;
+    font-family: poppins;
     font-size: 20px;
 }
 
 .calc_btn_row1{
+    text-align: center;
     background-color: rgb(128, 124, 124);
     border:none;
     padding:20px;
     color:rgb(255, 255, 255);
-    font-family: Lato;
+    font-family: poppins;
     font-size:20px;
     width:90px;
     font-weight: 400px;
@@ -46,6 +71,30 @@ input::-webkit-inner-spin-button {
 
 #label{
     
-    font-family: Inter;
+    font-family: poppins;
     font-size:20px;
+}
+
+.operbtns{
+    text-align: center;
+    background-color: rgb(255, 119, 7);
+    border:none;
+    padding:20px;
+    color:rgb(255, 255, 255);
+    font-family: poppins;
+    font-size:20px;
+    width:90px;
+    font-weight: 400px;
+}
+
+.toprowbtns{
+    text-align: center;
+    background-color: rgb(87, 85, 85);
+    border:none;
+    padding:20px;
+    color:rgb(255, 255, 255);
+    font-family: poppins;
+    font-size:20px;
+    width:90px;
+    font-weight: 400px;
 }
