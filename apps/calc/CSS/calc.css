@@ -3,7 +3,8 @@
 
 
 .window{
-    width:340px;
+    margin-left:40%;
+    width:380px ;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -56,7 +57,7 @@ input::-webkit-inner-spin-button {
     padding:30px;
     text-align: right;
     border:none;
-    width:272px;
+    width:330px;
     background-color: rgb(20, 20, 20);
     color:white;
     font-family: poppins;
@@ -114,3 +115,70 @@ input::-webkit-inner-spin-button {
     background-color: rgb(7, 7, 6);
 }
 
+
+
+:root {
+    --primary-grey: rgb(54, 57, 63);
+    --primary-white: #eee;
+}
+
+* {
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--primary-grey);
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 8px 6px;
+    box-shadow: 2px 4px 3px black;
+    position: fixed;
+}
+
+header a {
+    float: left;
+    text-align: center;
+    padding: 10px;
+    color: var(--primary-white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.36s;
+    border-radius: 8px;
+}
+
+header #nav-right {
+    float: right;
+}
+
+@media (max-width: 500px) {
+    header a {
+        float: none;
+        text-align: left;
+        display: block;
+    }
+
+    header #nav-right {
+        float: none;
+    }
+}
+
+main {
+    margin-top: 5.8rem;
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        position: static;
+    }
+    main {
+        margin-top: 3.275rem;
+    }
+}

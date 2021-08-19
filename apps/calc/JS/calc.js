@@ -48,6 +48,13 @@ function exec(type){
             document.getElementById("label").innerHTML = "";
             document.getElementById("main_input").focus();
         }
+
+        else if(type=="add"){
+            oper = 'add';
+            document.getElementById("label").innerHTML = prevVal;
+            document.getElementById("main_input").value = "";
+            n1 = parseFloat(prevVal);
+        }
     
 }
 
