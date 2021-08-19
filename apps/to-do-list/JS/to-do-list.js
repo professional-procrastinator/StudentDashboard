@@ -33,8 +33,7 @@ function renderTasks(tasks) {
     tasks.forEach((task, index) => {
         renderTask(task, tasksDiv);
     });
-
-    createTaskDiv.insertAdjacentElement('beforebegin', tasksDiv)
+    createTaskDiv.insertAdjacentElement('beforebegin', tasksDiv);
 }
 
 tasks = loadTasks();
