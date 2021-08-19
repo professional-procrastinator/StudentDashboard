@@ -46,7 +46,7 @@ function exec(type){
             document.getElementById("main_input").value = "";
             
             document.getElementById("label").innerHTML = "";
-    
+            document.getElementById("main_input").focus();
         }
     
 }
