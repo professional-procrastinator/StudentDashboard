@@ -119,6 +119,23 @@ button {
     border: 1px solid black;
     padding-bottom: 5px;
     padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+}
+
+.task-text {
+    margin: auto;
+}
+
+.task-checkmark {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-checkmark:hover {
+    transform: scale(1.5, 1.5);
 }
 
 .task:last-child {
