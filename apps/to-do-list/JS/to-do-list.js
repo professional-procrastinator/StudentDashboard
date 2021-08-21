@@ -1,93 +1,115 @@
-function loadTasks() {
-    if(localStorage.getItem('tasks') == []) {
-        return [];
+// Select all of the neccessory things
+
+const createTaskButton = document.querySelector('#create-button');
+const clearTasksButton = document.querySelector('#clear-tasks-button');
+const taskInput = document.querySelector('#create-task-input');
+const createTaskDiv = document.querySelector('#create-task-div');
+
+// Create a tasks list
+let tasks = [];
+
+// Make my localstorage here
+const taskStorage = window.localStorage;
+
+// Update local storage
+function updateStorage(tasks) {
+    taskStorage.setItem('tasks', tasks);
+}
+
+// Render task
+function renderTask(task, tasks) {
+    if(tasks.length == 1) {
+        // Make elements
+        let tasksContainer = document.createElement('div');
+        tasksContainer.id = 'tasks-container';
+        
+        let taskContainer = document.createElement('div');
+        taskContainer.classList.add('task-container');
+
+        let taskCheckMark = document.createElement('div');
+        taskCheckMark.classList.add('task-check-mark');
+
+        let taskData = document.createElement('div');
+        taskData.classList.add('task-data');
+
+        let taskRemove = document.createElement('div');
+        taskRemove.classList.add('task-remove');
+
+        // Structure the elements
+        taskRemove.innerText = '🗑'
+        taskRemove.title = 'Trash';
+
+        taskData.innerText = `${task}`;
+        taskData.title = `${task}`;
+
+        taskCheckMark.innerText = '✔';
+        taskCheckMark.title = 'Finish Task';
+
+        taskContainer.appendChild(taskCheckMark);
+        taskContainer.appendChild(taskData);
+        taskContainer.appendChild(taskRemove);
+
+        tasksContainer.appendChild(taskContainer);
+
+        // Render the elements
+        createTaskDiv.insertAdjacentElement('beforebegin', tasksContainer);
     }
     else {
-        return localStorage.getItem('tasks').split(',');
+        let tasksContainer = document.querySelector('#tasks-container')
+
+        let taskContainer = document.createElement('div');
+        taskContainer.classList.add('task-container');
+
+        let taskCheckMark = document.createElement('div');
+        taskCheckMark.classList.add('task-check-mark');
+
+        let taskData = document.createElement('div');
+        taskData.classList.add('task-data');
+
+        let taskRemove = document.createElement('div');
+        taskRemove.classList.add('task-remove');
+
+        // Structure the elements
+        taskRemove.innerText = '🗑'
+        taskRemove.title = 'Trash';
+
+        taskData.innerText = `${task}`;
+        taskData.title = `${task}`;
+
+        taskCheckMark.innerText = '✔';
+        taskCheckMark.title = 'Finish Task';
+
+        taskContainer.appendChild(taskCheckMark);
+        taskContainer.appendChild(taskData);
+        taskContainer.appendChild(taskRemove);
+
+        tasksContainer.appendChild(taskContainer);
+
+        // Render the elements
+        createTaskDiv.insertAdjacentElement('beforebegin', tasksContainer);
     }
 }
 
-function storeTasks(task, tasks) {
-    tasks.push(task);
-    localStorage.setItem('tasks', tasks);
-}
-
-function renderTask(task, tasksDiv) {
-    var taskDiv = document.createElement('div');
-    var checkMark = document.createElement('div');
-    var taskInnerDiv = document.createElement('div');
-
-
-    checkMark.classList.add('task-checkmark');
-    taskDiv.classList.add('task');
-    taskInnerDiv.classList.add('task-text')
-
-    taskInnerDiv.innerText = task;
-    checkMark.innerText = '✔';
-
-    checkMark.title = 'Done';
-
-    taskDiv.appendChild(checkMark)
-    taskDiv.appendChild(taskInnerDiv);
-
-    console.log(tasksDiv);
-    tasksDiv.appendChild(taskDiv);
-}
-
-function renderTasks(tasks) {
-    var tasksDiv = document.createElement('div');
-    var noTaskHeading = document.querySelector('#no-tasks');
-    tasksDiv.id = 'tasks-container';
-
-    var createTaskDiv = document.querySelector('#create-task-div');
-    
-    if(tasks.length != 0) {
-        noTaskHeading.style.display = 'none';
-    }
-
-    tasks.forEach((task, index) => {
-        renderTask(task, tasksDiv);
-    });
-    createTaskDiv.insertAdjacentElement('beforebegin', tasksDiv);
-}
-
-var tasks = loadTasks();
-renderTasks(tasks);
-
-function clearTasks() {
-    if(tasks.length == 0) {
-        alert('There are no tasks to be cleared');
-    }
-    else {
-        tasks = []
-        var tasksDiv = document.querySelector('#tasks-container');
-        var noTaskHeading = document.querySelector('#no-tasks');
-        localStorage.setItem('tasks', []);
-        tasksDiv.remove();
-        noTaskHeading.style.display = 'block';
-    }
-}
-
-function createTask() {
-    var taskInputBox = document.querySelector('#create-task-input');
-    var tasksDiv = document.querySelector('#tasks-container');
-    var noTaskHeading = document.querySelector('#no-tasks');
-    var task = taskInputBox.value;
+// Create tasks
+function createTask(task) {
     if(task != '') {
-        if(tasks.length == 0) {
-            noTaskHeading.style.display = 'none';
-            var NewtasksDiv = document.createElement('div');
-            NewtasksDiv.id = 'tasks-container';
-        }
-        renderTask(task, tasksDiv);
-        if (tasks.length == 0) {
-            var createTaskDiv = document.querySelector('#create-task-div');
-            createTaskDiv.insertAdjacentElement('beforebegin', NewtasksDiv);
-        }
-        storeTasks(task, tasks);
-        taskInputBox.value = '';
+        tasks.push(task);
+        updateStorage(tasks);
+        renderTask(task, tasks);
     }
     else {
-        alert('No task selected');
+        alert('Task is empty! ');
     }
 }
+
+// Get tasks
+function getAndCreateTask() {
+    const task = taskInput.value;
+    createTask(task);
+}
+
+// Clear tasks
+
+// Done task
+
+// Remove task
