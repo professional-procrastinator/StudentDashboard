@@ -14,8 +14,23 @@ function storeTasks(task, tasks) {
 
 function renderTask(task, tasksDiv) {
     var taskDiv = document.createElement('div');
-    taskDiv.classList.add('task')
-    taskDiv.innerHTML = task;
+    var checkMark = document.createElement('div');
+    var taskInnerDiv = document.createElement('div');
+
+
+    checkMark.classList.add('task-checkmark');
+    taskDiv.classList.add('task');
+    taskInnerDiv.classList.add('task-text')
+
+    taskInnerDiv.innerText = task;
+    checkMark.innerText = '✔';
+
+    checkMark.title = 'Done';
+
+    taskDiv.appendChild(checkMark)
+    taskDiv.appendChild(taskInnerDiv);
+
+    console.log(tasksDiv);
     tasksDiv.appendChild(taskDiv);
 }
 
@@ -44,6 +59,7 @@ function clearTasks() {
         alert('There are no tasks to be cleared');
     }
     else {
+        tasks = []
         var tasksDiv = document.querySelector('#tasks-container');
         var noTaskHeading = document.querySelector('#no-tasks');
         localStorage.setItem('tasks', []);
@@ -60,8 +76,14 @@ function createTask() {
     if(task != '') {
         if(tasks.length == 0) {
             noTaskHeading.style.display = 'none';
+            var NewtasksDiv = document.createElement('div');
+            NewtasksDiv.id = 'tasks-container';
         }
         renderTask(task, tasksDiv);
+        if (tasks.length == 0) {
+            var createTaskDiv = document.querySelector('#create-task-div');
+            createTaskDiv.insertAdjacentElement('beforebegin', NewtasksDiv);
+        }
         storeTasks(task, tasks);
         taskInputBox.value = '';
     }

@@ -78,7 +78,7 @@ main {
     position: absolute; 
     left:-60px;
 
-    transition: left 1s;
+    transition: left 0.5s;
 }
 
 .sidenav:hover{
