@@ -68,6 +68,7 @@ if(tasks.length != 0) {
 
 // Update local storage
 function updateStorage(tasks) {
+    console.log(tasks);
     taskStorage.setItem('tasks', tasks);
 }
 
@@ -77,7 +78,7 @@ function renderTask(task, tasks) {
         renderFirstTask(task);
     }
     else {
-        let tasksContainer = document.querySelector('#tasks-container')
+        let tasksContainer = document.querySelector('#tasks-container');
 
         let taskContainer = document.createElement('div');
         taskContainer.classList.add('task-container');
@@ -132,6 +133,12 @@ function getAndCreateTask() {
 }
 
 // Clear tasks
+function clearTasks() {
+    let tasksContainer = document.querySelector('#tasks-container');
+    tasks = [];
+    updateStorage(tasks);
+    tasksContainer.remove();
+}
 
 // Done task
 
