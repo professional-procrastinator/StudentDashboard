@@ -127,3 +127,8 @@ button {
     border: 1px black solid;
     border-radius: 5px;
 }
+
+.task-remove {
+    font-size: 15px;
+    cursor: pointer;
+}
