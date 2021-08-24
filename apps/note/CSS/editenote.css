@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+#nameh2{
+    font-family: Inter;
+    font-size:20px;
+    
+    outline:none;
+}
+
+.navMenu{
+    font-family: Inter;
+    display:flex;
+}
+
+.navLink:hover{
+    border-radius: 3px;
+    padding:3px;
+    background-color: rgb(230, 227, 227)
+}

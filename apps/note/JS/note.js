@@ -51,6 +51,9 @@ function createNote(){
                 nameInput.style.border = "none";
                 nameInput.style.borderBottom = "2px solid green";
             }, (2000));
+        }else{
+            localStorage.setItem(nameInput.value,"");
+            location.href = "editNote.html?note="+encodeURIComponent(nameInput.value);
         }
     }
 
