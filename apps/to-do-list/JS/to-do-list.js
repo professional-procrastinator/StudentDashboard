@@ -4,6 +4,7 @@ const createTaskButton = document.querySelector('#create-button');
 const clearTasksButton = document.querySelector('#clear-tasks-button');
 const taskInput = document.querySelector('#create-task-input');
 const createTaskDiv = document.querySelector('#create-task-div');
+const noTaskHeading = document.querySelector('#no-tasks');
 
 // Make my localstorage here
 const taskStorage = window.localStorage;
@@ -39,7 +40,7 @@ function renderFirstTask(task) {
     taskRemove.classList.add('task-remove');
 
     // Structure the elements
-    taskRemove.innerText = '🗑'
+    taskRemove.innerHTML = '🗑'
     taskRemove.title = 'Trash';
 
     taskData.innerText = `${task}`;
@@ -61,6 +62,7 @@ function renderFirstTask(task) {
 // Create a tasks list
 let tasks = loadTasks();
 if(tasks.length != 0) {
+    noTaskHeading.style.display = 'none';
     tasks.forEach((task, index) => {
         renderFirstTask(task);
     })
@@ -119,6 +121,7 @@ function createTask(task) {
         tasks.push(task);
         updateStorage(tasks);
         renderTask(task, tasks);
+        noTaskHeading.style.display = 'none';
     }
     else {
         alert('Task is empty! ');
@@ -135,9 +138,14 @@ function getAndCreateTask() {
 // Clear tasks
 function clearTasks() {
     let tasksContainer = document.querySelector('#tasks-container');
+    let taskContainer = document.querySelectorAll('.task-container');
     tasks = [];
     updateStorage(tasks);
+    if(noTaskHeading.style.display == 'none') {
+        noTaskHeading.style.display = 'block';
+    }
     tasksContainer.remove();
+    taskContainer.forEach(task => {task.remove()});
 }
 
 // Done task
