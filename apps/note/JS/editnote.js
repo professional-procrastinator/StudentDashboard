@@ -12,14 +12,19 @@ function loadNote(){
 
     const note_name = namePar.get('note');
 
-    console.log(localStorage.getItem(note_name));
+    if(note_name == null || note_name == ""){
+        location.href ="../../apps/note/note.html"
+    }
 
     document.getElementById("nameh2").innerHTML += " "+note_name;
     
-    if(localStorage.setItem(note_name,document.getElementsByClassName("txtArea")[0].value) == null){
-       document.getElementsByClassName("txtArea")[0].value = "";
-    }else{
-        document.getElementsByClassName("txtArea")[0].value = localStorage.setItem(note_name,document.getElementsByClassName("txtArea")[0].value);
+    if(localStorage.getItem(note_name) == null || localStorage.getItem(note_name) == undefined || localStorage.getItem(note_name) == ""){
+      console.log('ye')
+        document.getElementsByClassName("txtArea")[0].value = "";
+    }
+    else {
+        
+        document.getElementsByClassName("txtArea")[0].value = localStorage.getItem(note_name);
     }
 
 
