@@ -84,12 +84,6 @@ main {
     background-color: white;
 }
 
-.to-do-form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 #item {
     border: 1px solid var(--secondary-grey);
     outline: none;
