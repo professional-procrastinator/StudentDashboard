@@ -106,3 +106,27 @@ main {
 #submit-button:hover {
     background: var(--secondary-red-pink);
 }
+
+@media screen and (max-width: 1200px) {
+    .to-do-list {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .to-do-list {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .to-do-list {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .to-do-list {
+        width: 90%;
+    }
+}
