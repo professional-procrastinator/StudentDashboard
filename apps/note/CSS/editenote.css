@@ -8,6 +8,9 @@
     outline:none;
     margin-bottom: 5px;
 }
+body{
+    overflow:hidden;
+}
 
 .navMenu{
     font-family: Inter;
@@ -54,15 +57,34 @@
     font-family:'Open Sans';
     border:none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-left:470px !important;
+    margin-left:600px !important;
     margin-top:10px;
-    min-width:900px;
-    min-height:800px;
+    overflow:hidden; 
     outline:none;
     resize:none;
 }
 
+.txtAreaNew{
+    font-family:'Open Sans';
+    border:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left:600px !important;
+    
+    overflow:hidden; 
+    outline:none;
+    resize:none;
+}
 .mainTextArea{
-
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height:100%;
+    
     background-color:rgb(233, 233, 233)
+}
+
+
+.topContent{
+    
+    
+    width:100%;
 }
