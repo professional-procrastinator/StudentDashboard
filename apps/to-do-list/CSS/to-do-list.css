@@ -78,28 +78,23 @@ main {
 .to-do-list {
     width: 30%;
     margin: auto;
-    text-align: center;
     padding: 20px 20px;
     border-radius: 5px;
     background-color: white;
 }
 
+.to-do-form {
+    text-align: center;
+}
+
 #item {
     border: 1px solid var(--secondary-grey);
     outline: none;
-    padding: 10px 15px;
+    padding: 10px 25px;
 }
 
 #submit-button {
-    background: var(--primary-red-pink);
-    color: white;
-    border: none;
     padding: 10px 20px;
-    cursor: pointer;
-}
-
-#submit-button:hover {
-    background: var(--secondary-red-pink);
 }
 
 @media screen and (max-width: 1200px) {
@@ -114,7 +109,7 @@ main {
     }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 900px) {
     .to-do-list {
         width: 80%;
     }
@@ -127,4 +122,27 @@ main {
     #item {
         padding: 10px;
     }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.task-item {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary-grey);
+}
+
+button {
+    background: var(--primary-red-pink);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--secondary-red-pink);
 }
