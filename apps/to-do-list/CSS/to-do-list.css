@@ -76,15 +76,16 @@ main {
 }
 
 .to-do-list {
-    width: 25%;
+    width: 30%;
     margin: auto;
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 20px;
     border-radius: 5px;
     background-color: white;
 }
 
 .to-do-form {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -92,14 +93,14 @@ main {
 #item {
     border: 1px solid var(--secondary-grey);
     outline: none;
-    padding: 7px 10px;
+    padding: 10px 15px;
 }
 
 #submit-button {
     background: var(--primary-red-pink);
     color: white;
     border: none;
-    padding: 7px 10px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
@@ -113,19 +114,19 @@ main {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
     .to-do-list {
         width: 50%;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 830px) {
     .to-do-list {
         width: 80%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .to-do-list {
         width: 95%;
     }
