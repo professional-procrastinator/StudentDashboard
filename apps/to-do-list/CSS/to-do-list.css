@@ -4,6 +4,10 @@
 :root {
     --primary-grey: rgb(54, 57, 63);
     --primary-white: #eee;
+    --primary-blue: rgb(7, 115, 185);
+    --secondary-grey: rgb(200, 200, 200);
+    --primary-red-pink: rgb(200, 50, 120);
+    --secondary-red-pink: rgb(170, 30, 110);
 }
 
 * {
@@ -15,6 +19,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    background: var(--primary-blue);
 }
 
 header {
@@ -65,4 +73,36 @@ main {
     main {
         margin-top: 3.275rem;
     }
+}
+
+.to-do-list {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.to-do-form {
+    display: flex;
+    justify-content: center;
+}
+
+#item {
+    border: 1px solid var(--secondary-grey);
+    outline: none;
+    padding: 7px 10px;
+}
+
+#submit-button {
+    background: var(--primary-red-pink);
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background: var(--secondary-red-pink);
 }
