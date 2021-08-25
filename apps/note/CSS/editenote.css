@@ -1,19 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 #nameh2{
     font-family: Inter;
     font-size:20px;
-    
+    margin-left:5px;
     outline:none;
+    margin-bottom: 5px;
 }
 
 .navMenu{
     font-family: Inter;
     display:flex;
+   
 }
+.navLink{
+    padding-top:5px;
+    padding-bottom: 5px;
+    border:none;
+    background-color: transparent;
+}
+
 
 .navLink:hover{
     border-radius: 3px;
-    padding:3px;
-    background-color: rgb(230, 227, 227)
+    
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+}
+
+.utilPanel{
+    display:flex;
+}
+
+.utilobj{
+    margin-left:5px;
+}
+#boldBtn{
+    font-family: Inter;
+    
+    border:none;
+    background-color: transparent;
+
+}
+#boldBtn:hover{
+    border-radius: 3px;
+    
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+}
+
+.txtArea{
+    font-family:'Open Sans';
+    border:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left:470px !important;
+    margin-top:10px;
+    min-width:900px;
+    min-height:800px;
+    outline:none;
+    resize:none;
+}
+
+.mainTextArea{
+
+    background-color:rgb(233, 233, 233)
 }
