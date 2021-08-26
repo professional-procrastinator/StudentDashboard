@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap');
+
+:root {
+    --primary-grey: rgb(54, 57, 63);
+    --primary-white: #eee;
+    --primary-blue: rgb(7, 115, 185);
+    --secondary-grey: rgb(200, 200, 200);
+    --primary-red-pink: rgb(200, 50, 120);
+    --secondary-red-pink: rgb(170, 30, 110);
+}
+
+* {
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--primary-grey);
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 8px 6px;
+    box-shadow: 2px 4px 3px black;
+    position: fixed;
+}
+
+header a {
+    float: left;
+    text-align: center;
+    padding: 10px;
+    color: var(--primary-white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.36s;
+    border-radius: 8px;
+}
+
+header #nav-right {
+    float: right;
+}
+
+@media (max-width: 500px) {
+    header a {
+        float: none;
+        text-align: left;
+        display: block;
+    }
+
+    header #nav-right {
+        float: none;
+    }
+}
+
+main {
+    margin-top: 5.8rem;
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        position: static;
+    }
+    main {
+        margin-top: 3.275rem;
+    }
+}
+
+#canvasWrap {
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+}
