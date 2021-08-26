@@ -27,7 +27,7 @@ function displayItems() {
     const html = items
         .map(
             item => `<li class="task-item">
-            <input type='checkbox'>
+            <input ${item.complete ? 'checked' : ''} value=${item.id} type='checkbox'>
             <span class='itemName'>${item.name}</span>
             <button class='remove-buttons' value='${item.id}' aria-label='Remove ${item.name}'>&times;</button>
         </li>`
@@ -53,12 +53,21 @@ function deleteItem(id) {
     list.dispatchEvent(new CustomEvent('itemsUpdated'));
 }
 
+function markAsComplete(id) {
+    const itemRef = items.find(item => item.id === id);
+    itemRef.complete = !itemRef.complete;
+    list.dispatchEvent(new CustomEvent('itemsUpdated'));
+}
+
 taskForm.addEventListener('submit', handleSubmit);
 list.addEventListener('itemsUpdated', displayItems);
 list.addEventListener('itemsUpdated', updateLocalStorage);
 list.addEventListener('click', function(e) {
     if(e.target.matches('.remove-buttons')) {
         deleteItem(parseInt(e.target.value));
+    }
+    if(e.target.matches('input[type="checkbox"]')) {
+        markAsComplete(parseInt(e.target.value));
     }
 })
 restoreFromLocalStorage();
