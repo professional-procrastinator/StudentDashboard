@@ -12,6 +12,8 @@ let color = 'black';
 let x;
 let y;
 
+const { width, height } = canvas;
+
 canvas.addEventListener('mousedown', (e) => {
     isPressed = true;
 
@@ -19,29 +21,31 @@ canvas.addEventListener('mousedown', (e) => {
     y = e.offsetY;
 });
 
-canvas.addEventListener('mouseup', (e) => {
+function mouseUpFunct() {
     isPressed = false;
 
     x = y = undefined;
-});
+}
+
+canvas.addEventListener('mouseup', mouseUpFunct);
 
 canvas.addEventListener('mousemove', (e) => {
+    if(e.offsetX <= 0 || e.offsetX >= 500) {
+        mouseUpFunct();
+        return;
+    }
+    if(e.offsetY <= 0 || e.offsetY >= 500) {
+        mouseUpFunct();
+        return;
+    }
     if(isPressed) {
         const x2 = e.offsetX;
         const y2 = e.offsetY;
-        //drawCircle(x2, y2)
         drawLine(x, y, x2, y2);
         x = x2;
         y = y2;
     }
 });
-
-function drawCircle(x, y) {
-    ctx.beginPath();
-    ctx.arc(x, y, size, 0, 2 * Math.PI);
-    ctx.fillStyle = color;
-    ctx.fill();
-}
 
 function drawLine(x1, y1, x2, y2) {
     ctx.beginPath();
