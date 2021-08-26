@@ -3,9 +3,11 @@ const ctx = canvas.getContext('2d');
 const increaseBtn = document.querySelector('#increase');
 const decreaseBtn = document.querySelector('#decrease');
 const displayingSize = document.querySelector('#size');
+const colorEl = document.querySelector('#color');
 
 let size = 15;
 let isPressed = false;
+let color = 'black';
 
 canvas.addEventListener('mousedown', () => {
     isPressed = true;
@@ -26,6 +28,7 @@ canvas.addEventListener('mousemove', (e) => {
 function drawCircle(x, y) {
     ctx.beginPath();
     ctx.arc(x, y, size, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
     ctx.fill();
 }
 
@@ -42,6 +45,10 @@ decreaseBtn.addEventListener('click', () => {
     if (size < 5) size = 5;
     updateSizeOnDisplay();
 });
+
+colorEl.addEventListener('change', (e) => {
+    color = e.target.value;
+})
 
 function updateSizeOnDisplay() {
     displayingSize.innerText = size;

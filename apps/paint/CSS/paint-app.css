@@ -98,3 +98,15 @@ canvas {
     padding: 0.5rem;
     width: 37px;
 }
+
+#color {
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: white;
+}
+
+#size {
+    color: white;
+}
