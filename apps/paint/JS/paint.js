@@ -30,11 +30,11 @@ function mouseUpFunct() {
 canvas.addEventListener('mouseup', mouseUpFunct);
 
 canvas.addEventListener('mousemove', (e) => {
-    if(e.offsetX <= 0 || e.offsetX >= 500) {
+    if(e.offsetX <= 10 || e.offsetX >= 490) {
         mouseUpFunct();
         return;
     }
-    if(e.offsetY <= 0 || e.offsetY >= 500) {
+    if(e.offsetY <= 10 || e.offsetY >= 490) {
         mouseUpFunct();
         return;
     }
