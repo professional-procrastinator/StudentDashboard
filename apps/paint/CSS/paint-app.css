@@ -80,3 +80,21 @@ canvas {
     height: 500px;
     width: 500px;
 }
+
+.toolbox {
+    background-color: rgb(131, 61, 131);
+    width: 500px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.toolbox button {
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 37px;
+}

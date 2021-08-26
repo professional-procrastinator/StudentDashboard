@@ -1,7 +1,10 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
+const increaseBtn = document.querySelector('#increase');
+const decreaseBtn = document.querySelector('#decrease');
+const displayingSize = document.querySelector('#size');
 
-let size = 10;
+let size = 15;
 let isPressed = false;
 
 canvas.addEventListener('mousedown', () => {
@@ -26,11 +29,20 @@ function drawCircle(x, y) {
     ctx.fill();
 }
 
-//function draw() {
-//    ctx.clearRect(0, 0, canvas.width, canvas.height);
-//    drawCircle(x, y);
-//
-//    requestAnimationFrame(draw);
-//}
+increaseBtn.addEventListener('click', () => {
+    size += 5;
 
-//draw();
+    if (size > 50) size = 50;
+    updateSizeOnDisplay();
+});
+
+decreaseBtn.addEventListener('click', () => {
+    size -= 5;
+
+    if (size < 5) size = 5;
+    updateSizeOnDisplay();
+});
+
+function updateSizeOnDisplay() {
+    displayingSize.innerText = size;
+}
