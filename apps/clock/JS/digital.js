@@ -13,6 +13,7 @@ function setBackgroundAccordingToTime(hour) {
     if (hour >= 12 && hour < 16) {
         // Afternoon
         timeEl.style.backgroundColor = 'rgb(154, 239, 245)';
+	timeEl.style.color = 'black';
     }
     if (hour >= 16 && hour < 19) {
         // Evening
