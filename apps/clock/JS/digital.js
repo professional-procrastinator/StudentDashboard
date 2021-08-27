@@ -20,7 +20,7 @@ function setBackgroundAccordingToTime(hour) {
         timeEl.style.background = 'linear-gradient(rgb(240, 177, 105), rgb(237, 164, 81))';
     }
 
-    if (hour >= 19 && hour < 5) {
+    if (hour >= 19) {
         // Night
         timeEl.style.backgroundColor = 'rgb(0, 0, 0)';
     }
@@ -42,4 +42,4 @@ function getTime() {
     drawTime();
 }
 
-setInterval(getTime, 1000)
+setInterval(getTime, 1000);
