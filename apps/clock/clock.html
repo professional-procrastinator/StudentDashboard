@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='2 in 1 clocks! '>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Clock! </title>
+</head>
+<body>
+    <!-- Header starts here -->
+    <header>
+        <nav>
+            <a id="logo" href="home.html">Student Dashboard</a>
+            <div id="nav-right">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About us</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header ends here -->
+    <!-- Main starts here -->
+    <main>
+        <div class="dropdown">
+            <button class="dropbtn">Type of clock</button>
+            <div class="dropdown-content">
+            <a href="#" onclick='drawClock("analog")'>Analog Clock</a>
+            <a href="#" onclick='drawClock("digital")'>Digital Clock</a>
+            </div>
+        </div>
+        <div id="analog-clock">
+            <canvas id="canvas" width="400" height="400" style="background-color:#333">
+        </div>
+        <div id="digital-clock">
+            <div id="time">
+                
+            </div>
+            <div id="toolbar">
+                <div id="stop-watch-tab"><button>Stop watch</button></div>
+                <div id="alarm-tab"><button>Alarm</button></div>
+                <div id="timer-tab"><button>Timer</button></div>
+                <div id="time-tab"><button>Time</button></div>
+            </div>
+        </div>
+    </main>
+    <!-- Main ends here -->
+    <script src="JS/digital.js"></script>
+    <script src="JS/analog.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>
