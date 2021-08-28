@@ -13,8 +13,8 @@ function fetchNotes(){
         
         for(x=0;x<i;x++){
             noteA = document.createElement("a");
-            noteA.innerHTML = keys[x];
-            noteA.href = "editnote.html?note="+keys[x];
+            noteA.innerHTML = keys[x].replace("note","");
+            noteA.href = "editnote.html?note="+keys[x].replace("note","");
             noteA.className = "notesA"
             
             document.getElementsByClassName("divTable")[0].appendChild(noteA);
@@ -59,7 +59,7 @@ function createNote(){
                 nameInput.style.borderBottom = "2px solid green";
             }, (2000));
         }else{
-            localStorage.setItem(nameInput.value,"");
+            localStorage.setItem("note"+nameInput.value,"");
             location.href = "editNote.html?note="+encodeURIComponent(nameInput.value);
         }
     }

@@ -1,4 +1,3 @@
-pgGenerated = 0;
 
 document.body.onload = loadNote();
 
@@ -18,18 +17,18 @@ function loadNote(){
 
     document.getElementById("nameh2").innerHTML += " "+note_name;
     
-    if(localStorage.getItem(note_name) == null || localStorage.getItem(note_name) == undefined || localStorage.getItem(note_name) == ""){
-        document.getElementsByClassName("txtArea")[0].value = "";
+    if(localStorage.getItem("note"+note_name) == null || localStorage.getItem("note"+note_name) == undefined){
+        location.href ="../../apps/note/note.html";
     }
     else {
         
-        document.getElementsByClassName("txtArea")[0].value = localStorage.getItem(note_name);
+        document.getElementsByClassName("txtDiv")[0].innerHTML = localStorage.getItem("note"+note_name);
     }
 
 
     setInterval(function(){
-    localStorage.setItem(note_name,document.getElementsByClassName("txtArea")[0].value);
-    
+       localStorage.setItem("note"+note_name,document.getElementsByClassName("txtDiv")[0].innerHTML);
+        
     }, 2000);
 }
 
