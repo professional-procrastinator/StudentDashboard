@@ -22,6 +22,7 @@ body{
     border-top:none;
     border-left: none;
     border-right: none;
+    border-bottom-width: 2px;
     padding:11px;
     width:60%;
     outline:none;
@@ -74,6 +75,13 @@ body{
     margin-left:5%;
     background-color:rgb(53, 53, 53);
     border:none;
+}
+.createBtn:hover{
+    background-color:rgb(24, 24, 24);
+    cursor:pointer;
+}
+.createBtn:focus{
+    background-color:rgb(12, 12, 12)
 }
 
 .closeBtn{

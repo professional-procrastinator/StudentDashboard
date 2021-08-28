@@ -52,7 +52,7 @@ function createNote(){
     createBtn.onclick = function proceed(){
         if(nameInput.value == ""){
             nameInput.focus();
-            nameInput.style.border = "1px solid red";
+            nameInput.style.borderBottom = "1px solid red";
 
             setTimeout(() => {
                 nameInput.style.border = "none";
