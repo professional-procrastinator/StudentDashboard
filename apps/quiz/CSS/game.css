@@ -24,3 +24,12 @@
     padding: 1.5rem;
     width: 100%;
 }
+
+.correct {
+    background: linear-gradient(45deg, rgb(130, 228, 130), rgb(200, 255, 200));
+    box-shadow: 0 0.4rem 1.4rem 0 #b8a5b9;
+}
+
+.incorrect {
+    background: linear-gradient(45deg, rgb(255, 126, 126), rgb(255, 150, 150));
+}
