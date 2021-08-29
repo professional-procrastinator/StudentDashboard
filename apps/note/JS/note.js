@@ -2,17 +2,24 @@ document.body.onload = fetchNotes();
 recentDiv = document.getElementsByClassName("recentDIV")[0];
 addDiv = document.getElementsByClassName("addNewNoteDIV")[0];
 
+
 function fetchNotes(){
     
         var list = [],
         keys = Object.keys(localStorage),
         i = keys.length;
 
-        while ( i-- ) {
-            list.push( localStorage.getItem(keys[i]) );
-        }
         
-        console.log(list)
+        
+        for(x=0;x<i;x++){
+            noteA = document.createElement("a");
+            noteA.innerHTML = keys[x];
+            noteA.href = "editnote.html?note="+keys[x];
+            noteA.className = "notesA"
+            
+            document.getElementsByClassName("divTable")[0].appendChild(noteA);
+            
+        }
 }
 
 function createNote(){
