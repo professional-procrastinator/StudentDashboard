@@ -42,4 +42,10 @@ function getTime() {
     drawTime();
 }
 
-setInterval(getTime, 1000);
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function updateTime() {
+    setInterval(getTime, 1000);
+}
