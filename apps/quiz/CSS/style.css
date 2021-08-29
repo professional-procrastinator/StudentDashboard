@@ -42,7 +42,6 @@ h3 {
 
 .container {
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,4 +102,24 @@ h3 {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 #c3b2c4;
+}
+
+input::placeholder {
+    color: #aaa;
 }

@@ -23,6 +23,7 @@
 .choice-text {
     padding: 1.5rem;
     width: 100%;
+    transition: all 0.5s;
 }
 
 .correct {
@@ -32,4 +33,27 @@
 
 .incorrect {
     background: linear-gradient(45deg, rgb(255, 126, 126), rgb(255, 150, 150));
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#progressBar {
+    width: 20rem;
+    margin-top: 1.5rem;
+    height: 4rem;
+    border: 0.3rem solid #670E6B;
+}
+
+#progressBarFull {
+    height: 3.4rem;
+    background-color: #670E6B;
+    width: 0%;
 }
