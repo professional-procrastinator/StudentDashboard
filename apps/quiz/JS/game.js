@@ -81,6 +81,19 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+const showCorrectAnswer = () => {
+    choices.forEach((choiceForCorrect) => {
+        if (choiceForCorrect.innerHTML === currentQuestion[`choice${currentQuestion.answer}`]) {
+            console.log(choiceForCorrect);
+            choiceForCorrect.parentElement.classList.add('correct');
+            setTimeout(() => {
+                choiceForCorrect.parentElement.classList.remove('correct');
+            }, 1000);
+            return choiceForCorrect;
+        }
+    });
+}
+
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
@@ -89,11 +102,14 @@ choices.forEach((choice) => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
-        const classToApply =
-            selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         if (classToApply === 'correct') {
             incrementScore(CORRECT_BONUS);
+        }
+        else {
+            choiceForCorrect = showCorrectAnswer();
+
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
