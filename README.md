@@ -11,5 +11,5 @@ Student dashboard, project created by @smeh09 and @Haunter-123
 ###### Themes and Settings
 ###### Snake game
 ###### Calendar
-##### Quiz - Will do @smeh09
+###### Quiz - Done by @smeh09
 ###### Music - Will do @Haunter-123
